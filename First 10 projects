@@ -1,0 +1,269 @@
+Greeting Project:
+Instruction:
+Write a program that uses input to prompt a user for their name and then welcomes them.
+Code:
+print("Hello Elshad")
+print("Welcome to the Python")
+Input:
+Elshad
+Output:
+Hello Elshad.
+Welcome to the Python
+
+Project 2: Band name Generator
+Group Name Project:
+Instruction:
+Create a greeting for your program.
+Ask the user for their favorite color.
+Ask the user for their favotire animal.
+Combine the name of their favorite color and animal and show them their group name.
+Examples
+Welcome to the Group Name Generator.
+What's your favorite color?
+> Red
+What's your favorite animal?
+> Lion
+Your group name could be Red Lions
+Code:
+print("Welcome to the Band name Generator")
+color=input("What's your favourite color?")
+animal=input("What's your favourite animal?")
+print(color)
+print(animal)
+Output:
+Blue
+Lion
+
+Project 3:  Gross Pay
+Gross Pay Project
+Instruction
+Write a program to prompt the user for hours and rate per hour to compute gross pay. You need to take into account that the result has exactly two digits after the decimal place.
+Input
+Enter Hours: 35
+Enter Rate: 2.75
+Output
+Pay: 96.25
+
+Code:
+hour = input("Enter Hours: ")
+rate = input("Enter Rate: ")
+hour = float(hour)
+rate = float(rate)
+pay = round(hour*rate,2)
+print(f"Pay: {pay}")
+
+Output:
+Pay: 96.25
+
+Project 4:
+Celsius to Fahrenheit Project
+Instruction
+Write a program which prompts the user for a Celsius temperature, convert the temperature to Fahrenheit, and print out the converted temperature. Formula : (°C × 9/5) + 32 = °F
+Input
+Enter Temperature in Celsius: 10
+Output
+10 Celsius = 50 Fahrenheit
+
+Code:
+celcsius = input("Enter Temperature in Celsius:")
+fahrenheit = (int(celcsius) * 9/5) + 32
+print(f"{celcsius} Celsius = {fahrenheit} Fahrenheit")
+
+Output:
+Enter Temperature in Celsius: 10
+Output
+10 Celsius = 50 Fahrenheit
+
+Project 5:
+Trip Cost Calculator Project:
+Instruction
+Write a program which calculates trip cost for a user.
+
+Create a greeting for your program.
+Ask the user for number of days.
+Ask the user for hotel price.
+Ask the user for flight price.
+Ask the user for rental car price.
+Ask for other expenses.
+Combine all expenses together and print with 2 digits after decimal places.
+Input
+Welcome to the Trip Cost Calculator!
+How many days will you stay? 3
+How much does hotel cost per night? $30
+How much does flight cost? $50
+If you need rental car please enter the price otherwise enter zero. $10
+Enter other possible expenses $0
+Output
+Total Cost: $170.0
+
+Code:
+print("Welcome to the Trip Cost Calculator!")
+number_days = int(input("How many days will you stay? "))
+hotel_price = float(input("How much does hotel cost per night? $"))
+flight_cost = float(input("How much does flight cost? $"))
+car_rent = float(input("If you need rental car please enter the price otherwise enter zero. $"))
+other_expenses = float(input("Enter other possible expenses $"))
+total_cost = number_days * hotel_price + flight_cost + car_rent * number_days + other_expenses
+print(f"Total Cost: ${total_cost}")
+
+Output:
+Total Cost: $170.0
+
+
+Project 6:
+Gross Pay with Ovetime
+Instruction
+Rewrite the Gross Pay Project (Project 3) program to give the employee 1.5 times the hourly rate for hours worked above 40 hours. Here again the program prompts the user for hours and rate per hour to compute gross pay. You need to take into account that the result has exactly two digits after the decimal place.
+
+Hint: overtime = hour - 40
+
+Input
+Enter Hours: 45
+Enter Rate: 5
+Output
+Pay: 237.5
+
+Code:
+hour = input("Enter Hours: ")
+rate = input("Enter Rate: ")
+hour = float(hour)
+rate = float(rate)
+
+if hour < 40:
+    pay = round(hour*rate,2)
+else:
+    overtime = hour - 40;
+    pay = (rate * 40.0) + (1.5 * rate * overtime)
+
+print(f"Pay: {pay}")
+
+Output:Pay: 237.5
+
+Project 7:
+Project 7 - Leap Year
+Instructions
+Write a program that works out whether if a given year is a leap year. A normal year has 365 days, leap years have 366, with an extra day in February.
+
+Three criteria must be taken into account to identify leap years:
+
+This is how you work out whether if a particular year is a leap year.
+
+The year must be evenly divisible by 4; If the year can also be evenly divided by 100, it is not a leap year; **unless** the year is also evenly divisible by 400
+
+e.g. The year 2000:
+
+2000 ÷ 4 = 500 (Leap)
+
+2000 ÷ 100 = 20 (Not Leap)
+
+2000 ÷ 400 = 5 (Leap!)
+
+So the year 2000 is a leap year.
+
+Example Input
+2400
+Example Output
+Leap year.
+Code:
+year = int(input("Enter year: "))
+if year % 4 == 0:
+  if year % 100 == 0:
+    if year % 400 == 0:
+      print("Leap year.")
+    else:
+      print("Not leap year.")
+  else:
+    print("Leap year.")
+else:
+  print("Not leap year.")
+  
+Project 7:
+Project 8 - Love Calculator
+Instructions
+Write a program to test the compatibility between two people.
+
+Take both people's names and check for the number of times the letters in the word TRUE occurs. Then check for the number of times the letters in the word LOVE occurs. Then combine these numbers to make a 2 digit number.
+
+For Love Scores less than 10 or greater than 85, the message should be:
+
+"Your score is **x**, you go together like coke and mentos."
+
+For Love Scores between 40 and 70, the message should be:
+
+"Your score is **y**, you are alright together."
+
+Otherwise, the message will just be their score. e.g.:
+
+"Your score is **z**."
+
+Example
+
+name1 = "David"
+
+name2 = "Jennifer"
+
+T occurs 0 times
+
+R occurs 1 time
+
+U occurs 0 times
+
+E occurs 2 times
+
+Total = 3
+
+L occurs 0 time
+
+O occurs 0 times
+
+V occurs 1 times
+
+E occurs 2 times
+
+Total = 3
+
+Love Score = 33
+
+Print: "Your score is 33."
+
+Example Input 1
+name1 = "David"
+name2 = "Jennifer"
+Example Output 1
+Your score is 33.
+Hint
+The lower() function changes all the letters in a string to lower case.
+
+The count() function will give you the number of times a letter occurs in a string.
+Code:
+print("Welcome to Love Calculator!")
+name1 = input("Enter your name: ")
+name2 = input("Enter your lover name: ")
+
+combined_name = name1 + name2
+
+lower_cased_name = combined_name.lower()
+
+t = lower_cased_name.count("t")
+r = lower_cased_name.count("r")
+u = lower_cased_name.count("u")
+e = lower_cased_name.count("e")
+
+true = t + r + u + e
+
+l = lower_cased_name.count("l")
+o = lower_cased_name.count("o")
+v = lower_cased_name.count("v")
+e = lower_cased_name.count("e")
+
+love = l + o + v + e
+
+love_score = int(str(true) + str(love))
+print(love_score)
+
+if love_score < 10 or love_score > 85:
+    print(f"Your score is {love_score}, you go together like coke and mentos")
+elif love_score >= 40 and love_score <= 70:
+    print(f"Your score is {love_score}, you alright go together")
+else:
+    print(f"Your score is {love_score}")
